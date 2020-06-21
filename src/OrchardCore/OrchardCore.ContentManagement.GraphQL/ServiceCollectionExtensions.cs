@@ -13,6 +13,7 @@ namespace OrchardCore.ContentManagement.GraphQL
         {
             services.AddSingleton<ISchemaBuilder, ContentItemQuery>();
             services.AddSingleton<ISchemaBuilder, ContentTypeQuery>();
+            services.AddSingleton<ContentItemInterface>();
 
             services.AddTransient<ContentItemType>();
 
@@ -26,7 +27,6 @@ namespace OrchardCore.ContentManagement.GraphQL
 
             return services;
         }
-
 
         /// <summary>
         /// Registers a type providing custom filters for content item filters
